@@ -163,6 +163,18 @@ p { color: var(--text-muted); }
 .feature-grid { gap: var(--space-lg) var(--space-xl); }
 .feature-item { border-left: 3px solid var(--accent); padding-left: var(--space-md); }
 
+/* ---------- Callout Box ---------- */
+.callout-box {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+.callout-box h3 { margin-bottom: var(--space-xs); }
+.callout-box p { max-width: 680px; }
+
 /* ---------- Pricing ---------- */
 .pricing-main {
   display: grid;
@@ -199,8 +211,28 @@ p { color: var(--text-muted); }
 }
 .pricing-list li:last-child { border-bottom: none; }
 
+.payment-terms {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+}
+.payment-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 4px !important; }
+.payment-terms p:last-child { color: rgba(255,255,255,0.82); font-size: 0.9375rem; }
+
 .pricing-addons { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-lg); }
 .pricing-addons h3 { margin-bottom: var(--space-md); }
+
+.ownership-box {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+.ownership-box h3 { font-size: 1rem; margin-bottom: 6px; }
+.ownership-box p { font-size: 0.9rem; }
 .addon-row { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-sm); padding: var(--space-sm) 0; border-bottom: 1px solid var(--border); }
 .addon-row:last-child { border-bottom: none; }
 .addon-name { display: block; font-weight: 700; font-size: 0.9375rem; }
@@ -209,7 +241,8 @@ p { color: var(--text-muted); }
 .addon-price span { font-weight: 500; font-size: 0.75rem; color: var(--text-muted); }
 
 /* ---------- Projects ---------- */
-.project-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.project-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.project-industry { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px; }
 .project-shot { aspect-ratio: 16/10; background: var(--border); display: flex; align-items: center; justify-content: center; }
 .project-shot img { width: 100%; height: 100%; object-fit: cover; }
 .project-body { padding: var(--space-md); }
@@ -243,8 +276,20 @@ p { color: var(--text-muted); }
 .faq-item p { margin-top: var(--space-sm); }
 
 /* ---------- Founder ---------- */
-.founder-inner { max-width: 640px; text-align: center; }
-.founder-text { font-size: 1.125rem; color: var(--primary); font-weight: 500; line-height: 1.7; }
+.founder-inner { max-width: 900px; }
+.founder-layout { display: grid; grid-template-columns: 200px 1fr; gap: var(--space-xl); align-items: start; }
+.founder-photo-wrap { flex-shrink: 0; }
+.founder-photo-wrap img { width: 200px; height: 200px; object-fit: cover; border-radius: var(--radius); }
+.founder-photo-placeholder {
+  width: 200px; height: 200px;
+  background: var(--border);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.875rem; color: var(--text-muted); font-weight: 600;
+}
+.founder-content h2 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
+.founder-text { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: var(--space-sm); }
+.founder-text:last-child { margin-bottom: 0; }
 
 /* ---------- Application Form ---------- */
 .application-form { margin-top: var(--space-lg); max-width: 720px; }
@@ -309,4 +354,6 @@ p { color: var(--text-muted); }
   .hero { padding: var(--space-xl) 0 var(--space-lg); }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
+  .founder-layout { grid-template-columns: 1fr; }
+  .founder-photo-wrap, .founder-photo-placeholder { width: 140px; height: 140px; }
 }
