@@ -211,7 +211,8 @@ p { color: var(--text-muted); }
 }
 .pricing-list li:last-child { border-bottom: none; }
 
-.pricing-trust { font-size: 1rem; font-weight: 700; color: var(--accent); margin-top: calc(var(--space-sm) * -0.5); margin-bottom: var(--space-lg); }
+.pricing-trust { font-size: 1rem; font-weight: 700; color: var(--accent); margin-top: calc(var(--space-sm) * -0.5); margin-bottom: var(--space-xs); }
+.pricing-byline { font-size: 0.9375rem; color: var(--text-muted); margin-bottom: var(--space-lg); }
 
 .payment-terms {
   margin: var(--space-md) 0;
